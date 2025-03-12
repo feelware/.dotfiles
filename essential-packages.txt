@@ -3,6 +3,7 @@ bat
 curl
 git
 gpg
+kitty
 neofetch
 openssh-server
 pass
