@@ -24,7 +24,7 @@ sudo update-alternatives --config x-terminal-emulator
 
 # set up ssh
 
-ssh-keygen -t ed25519 -C "stevanpersonal@gmail.com" -f ~/.ssh/id_ed25519
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 printf "$(cat ~/.ssh/id_ed25519.pub)\n\ngo to https://github.com/settings/ssh/new and add the public key shown above, then press q to continue" | less
