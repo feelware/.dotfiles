@@ -1,9 +1,10 @@
 apt-transport-https
+bat
+curl
 git
 gpg
-stow
-curl
 neofetch
-zsh
-pass
 openssh-server
+pass
+stow
+zsh
