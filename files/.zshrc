@@ -128,6 +128,7 @@ done
 . ~/.zsh/zsh-history.zsh
 . ~/.zsh/sudo.plugin.zsh
 . ~/.zsh/.fzf.zsh
+. ~/.zsh/bd.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 . ~/.p10k.zsh
