@@ -1,0 +1,4 @@
+*.bak
+files/.config/*
+
+!files/.config/kitty/

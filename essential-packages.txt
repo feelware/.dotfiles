@@ -1,0 +1,9 @@
+apt-transport-https
+git
+gpg
+stow
+curl
+neofetch
+zsh
+pass
+openssh-server
