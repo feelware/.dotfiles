@@ -53,7 +53,7 @@ gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed  false
 gsettings set org.gnome.shell.extensions.dash-to-dock show-trash  false
 gsettings set org.gnome.shell.extensions.dash-to-dock show-mounts false
 
-# install other utils
+# install and configure other utils
 
 curl -fsSL https://bun.sh/install | bash
 
@@ -66,3 +66,10 @@ sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
 echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
 sudo apt update && sudo apt install glow -y
+
+sudo apt install gnome-software-plugin-flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+flatpak install --noninteractive flathub dev.vencord.Vesktop
+
+sudo snap install obsidian --classic
