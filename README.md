@@ -19,17 +19,11 @@ send key (from host that has it):
 gpg --export-secret-keys <key-id> | ssh stevan@<requestor-ip> gpg --import
 ```
 
-### get password store:
+### rsync files from previous host
 
-```bash
-scp stevan@<owner-ip>:~/.password-store ~
-```
-
-### copy obsidian vault:
-
-```bash
-scp stevan@<owner-ip>:~/vault ~
-```
+- ~/.password-store
+- ~/vault
+- ~/.config/REAPER
 
 ### install extra drivers if necessary
 
