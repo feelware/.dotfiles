@@ -1,0 +1,7 @@
+hide_window_decorations yes
+font_size 15.0
+
+# BEGIN_KITTY_THEME
+# Space Gray Eighties
+include current-theme.conf
+# END_KITTY_THEME

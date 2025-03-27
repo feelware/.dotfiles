@@ -1,0 +1,13 @@
+apt-transport-https
+bat
+chromium-browser
+curl
+flatpak
+git
+gpg
+kitty
+neofetch
+openssh-server
+pass
+stow
+zsh
