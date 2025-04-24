@@ -101,7 +101,7 @@ paths=(
   /opt/datagrip/bin/
   $main_home/.pub-cache/bin
   $main_home/.local/share/yabridge
-  $main_home/.opt/android-platform-tools
+  $main_home/opt/android-platform-tools
 )
 
 for p in ${(Oa)paths}; do
@@ -114,12 +114,12 @@ done
 . "$main_home/.cargo/env"
 [ -s "$main_home/.bun/_bun" ] && source "$main_home/.bun/_bun"
 
-# export PYENV_ROOT="$main_home/.pyenv"
-# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init -)"
+export PYENV_ROOT="$main_home/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # Load pyenv-virtualenv automatically by adding the following to ~/.bashrc:
-# eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # -- load plugins
 
@@ -140,3 +140,5 @@ done
 [ -s "$main_home/.bun/_bun" ] && source "$main_home/.bun/_bun"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+. "$HOME/.local/share/../bin/env"

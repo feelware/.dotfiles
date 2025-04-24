@@ -23,7 +23,10 @@ gpg --export-secret-keys <key-id> | ssh stevan@<requestor-ip> gpg --import
 
 - ~/.password-store
 - ~/vault
-- ~/.config/REAPER
+
+### install additional apps
+
+- [cardinal synth](https://github.com/DISTRHO/Cardinal/releases/latest)
 
 ### install extra drivers if necessary
 

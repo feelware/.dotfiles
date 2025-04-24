@@ -46,12 +46,13 @@ sudo apt update && sudo apt install -y code
 
 # tweak gnome settings
 
-gsettings set org.gnome.desktop.interface color-scheme            prefer-dark
-gsettings set org.gnome.desktop.interface enable-animations       false
-gsettings set org.gnome.desktop.interface clock-show-seconds      true
-gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed  false
-gsettings set org.gnome.shell.extensions.dash-to-dock show-trash  false
-gsettings set org.gnome.shell.extensions.dash-to-dock show-mounts false
+gsettings set org.gnome.desktop.interface color-scheme             prefer-dark
+gsettings set org.gnome.desktop.interface enable-animations        false
+gsettings set org.gnome.desktop.interface clock-show-seconds       true
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed   false
+gsettings set org.gnome.shell.extensions.dash-to-dock show-trash   false
+gsettings set org.gnome.shell.extensions.dash-to-dock show-mounts  false
+gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
 
 # install wine staging (9.21)
 
@@ -67,6 +68,13 @@ sudo apt-mark hold winehq-staging wine-staging wine-staging-amd64 wine-staging-i
 YABRIDGE_VERSION=$(curl -s "https://api.github.com/repos/robbert-vdh/yabridge/tags" | jq -r '.[0].name')
 wget -O - "https://github.com/robbert-vdh/yabridge/releases/latest/download/yabridge-${YABRIDGE_VERSION}.tar.gz" | tar -xz
 mv yabridge ~/.local/share/
+
+# install bespoke-synth
+
+echo 'deb http://download.opensuse.org/repositories/home:/bespokesynth/xUbuntu_24.04/ /' | sudo tee /etc/apt/sources.list.d/home:bespokesynth.list
+curl -fsSL https://download.opensuse.org/repositories/home:bespokesynth/xUbuntu_24.04/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_bespokesynth.gpg > /dev/null
+sudo apt update
+sudo apt install bespokesynth
 
 # install and configure other utils
 
